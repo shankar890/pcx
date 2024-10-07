@@ -1,0 +1,16 @@
+package Amazon;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+@CucumberOptions(
+		dryRun=false,// when will we excute the file it will map feature file with step defination here it will check all the mathod are present or not
+		monochrome =  true,// it will show the output readable  format
+		features={"src/test/resources"},
+		glue ={"Amazon"},
+		plugin={"pretty","html:/target/cucmberreports"},
+		tags = "@smoke"
+		
+)
